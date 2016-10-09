@@ -1,0 +1,2 @@
+mondoarchive -Oi -N -7 -s 3900m -p "agri-centos6-JA_gifu-s4"-`date +%Y-%m-%d` -d "/tmp" -E "/mnt /media /net"  
+

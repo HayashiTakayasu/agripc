@@ -1,0 +1,10 @@
+#check status
+swapon -s
+#sudo /etc/init.d/dphys-swapfile stop
+sudo nano /etc/dphys-swapfile
+CONF_SWAPSIZE=1024
+sudo /etc/init.d/dphys-swapfile start
+#check
+swapon -s
+cat /proc/meminfo
+

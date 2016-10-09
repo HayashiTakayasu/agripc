@@ -1,0 +1,35 @@
+
+system("sudo hwclock --hctosys")
+
+before=nil
+before2=nil
+loop do
+  p t=Time.now
+  day=t.day
+  hour=t.hour
+  min=t.min
+  #each min do
+  if min!=before2
+    sleep   10
+    before2=min
+    `ruby ./thermo_gruff2.rb ./thermo_data/thermo_data2.txt ./thermo_data/thermo_data.jpg`
+    sleep 1
+    #system("clear")
+  end
+  
+  #each day do
+  if hour!=before
+    before=hour
+    system("sudo hwclock --hctosys")
+    sleep 60
+    `ruby ./thermo_gruff_yesterday.rb`
+    `ruby ./thermo_gruff_past.rb`
+    `gnuplot ./sample.plot`
+    `gnuplot ./co2.plot`
+    sleep 1
+    #system("clear")
+  end
+
+  sleep 600
+end
+

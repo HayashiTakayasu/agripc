@@ -1,0 +1,89 @@
+body    {
+  font-size:15px;
+  /*
+  direction:rtl;
+  overflow-x:scroll;
+  overflow-y:auto;
+  */
+}
+a{
+  /*
+  display:none;
+  none;inline
+  */
+}
+div{
+  /*
+  writing-mode:tb-rl;
+  direction:ltr;
+  */
+}
+h5{
+  /*
+  text-align:right;
+  */
+}
+
+.M101{
+font-family:"Mojikyo M101"
+}
+.M102{
+font-family:"Mojikyo M102"
+}
+.M103{
+font-family:"Mojikyo M103"
+}
+.M104{
+font-family:"Mojikyo M104"
+}
+.M105{
+font-family:"Mojikyo M105"
+}
+.M106{
+font-family:"Mojikyo M106"
+}
+.M107{
+font-family:"Mojikyo M107"
+}
+.M108{
+font-family:"Mojikyo M108"
+}
+.M109{
+font-family:"Mojikyo M109"
+}
+.M110{
+font-family:"Mojikyo M110"
+}
+.M111{
+font-family:"Mojikyo M111"
+}
+.M112{
+font-family:"Mojikyo M112"
+}
+
+span.author{
+font-size:22px;
+font-weight:normal;
+}
+
+span.aa{color:black;}
+rt{font-size:9px;}
+
+.ver{
+display:block;
+color:navy;
+}
+.vc{
+display:block;
+}
+.dhr{
+display:block;
+color:darkslateblue;
+}
+.com{
+font-size:9px;
+color:darkorange;
+}
+.sutra_number{
+display:none
+}

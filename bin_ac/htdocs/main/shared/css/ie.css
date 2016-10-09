@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+.ie #pickup div.tabContents:last-child {
+  padding: 0;
+}
+
+.ie #pickup div.round {
+  -pie-background: linear-gradient(top, #fff 14%, #dfdddd 100%);
+  position: relative;
+}

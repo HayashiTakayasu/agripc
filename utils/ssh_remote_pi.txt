@@ -1,0 +1,1 @@
+ ssh -i ../y2 pi@192.168.1.34 'cd ./Desktop;tar zcf - ma' |cat >ma_test.tar.gz

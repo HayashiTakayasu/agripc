@@ -1,0 +1,567 @@
+@charset "utf-8";
+
+#globalHeader h1 a {
+/*  background: url(../images/logo_lt_768.png) left top no-repeat; */
+  background-color:#ffffff
+  /*background-size: 100%;*/
+  
+  display: block;
+  height: 28px;
+  overflow: auto;
+  text-indent: 100%;
+  white-space: nowrap;
+  width: 118px;
+}
+
+div.alert span, 
+#pickup h3,
+div.indexBoxes div.captionBox {
+  display: none;
+}
+
+#globalHeader nav.menu #menuToggle,
+#globalHeader div.search p#searchToggle,
+#globalHeader div.search div.form button {
+  background: -moz-linear-gradient(top, #eeedf2 1%, #717171 4%, #2b2b2b 84%);
+}
+
+#globalHeader div.search form input[type="search"] {
+  -moz-box-sizing: border-box;
+}
+
+#pickup ul.tab li a {
+  background-image: -moz-linear-gradient(top, #eeedf2, #717171 4%, #2b2b2b 74%);
+}
+
+#pickup ul.tab li.current a {
+  background-image: -moz-linear-gradient(top, #e9e9e9 0%, #ffffff 29%);
+}
+
+#pickup {
+  
+}
+
+#pickup div.round {
+  background-image: -moz-linear-gradient(top, #ffffff 14%, #dfdddd 100%);
+}
+
+div.indexBoxes {
+  margin: 0 0 20px 0;
+}
+
+div.indexBoxes section.child {
+  border-top: 1px solid #ccc;
+}
+
+div.indexBoxes section.child:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+div.indexBoxes section.child a h2 {
+  background-image: -moz-linear-gradient(top, #ffffff, #efefef);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#efefef));
+  background-image: -webkit-linear-gradient(top, #ffffff, #efefef);
+  background-image: linear-gradient(top, #ffffff, #efefef);
+  font-size: 16px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+div.indexBoxes section.child a h2 span {
+  /* background: url(../images/icon_arrow_black.png) no-repeat 100% 50%; */
+  background-color:#
+  display: block;
+  padding: 12px 10px;
+}
+
+section.seminar h2,
+section.information h2 {
+  background-image: -moz-linear-gradient(top, #ffffff, #efefef);
+}
+
+dl.informationLink dt {
+  clear: left;
+  color: #777;
+  float: left;
+  margin-top: 12px;
+  padding-left: 10px;
+  position: relative;
+  width: 8em;
+  z-index: 1;
+}
+
+dl.informationLink dd {
+  background: url(../images/icon_arrow_gray.png) no-repeat 100% 50%;
+  border-top: 1px solid #ccc;
+  position: relative;
+  z-index:10;
+}
+
+dl.informationLink dd a {
+  display: block;
+  margin: 0;
+  padding: 12px 30px 12px 10em;
+}
+
+section.information {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 20px 0;
+}
+
+.toggle h2 {
+  cursor: pointer;
+}
+
+.toggle.close dl {
+  display: none;
+}
+
+#globalFooter nav ul li {
+  -moz-box-sizing: border-box;
+}
+
+@media screen and (min-width:768px){
+  a:link,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:active,
+  a:hover {
+    text-decoration: underline;
+  }
+
+  #globalHeader {
+    border: none;
+    padding: 0;
+  }
+
+  #globalHeader .headerInner {
+    margin: 0 auto;
+    border: 1px
+    position: relative;
+    width: 768px;
+  }
+
+  #globalHeader h1 {
+    float: none;
+    padding: 28px 0 0 2px;
+  }
+
+  #globalHeader h1 a {
+/*    background: url(../images/logo_gte_768.png) left top no-repeat;
+*/
+    height: 43px;
+    width: 402px;
+  }
+
+  #globalHeader nav.menu,
+  #globalHeader nav.menu.open {
+    background: url(../images/bg_nav_header.png) left top repeat-x;
+    background-size: contain;
+    float: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  #globalHeader nav.menu #menuToggle {
+    display: none;
+  }
+
+  #globalHeader nav.menu ul,
+  #globalHeader nav.menu.open ul {
+    background: none;
+    border: none !important;
+    box-shadow: none;
+    display: block;
+    margin: 30px auto 0;
+    width: 768px;
+    padding: 0 0 4px;
+    position: static;
+  }
+
+  #globalHeader nav.menu ul li,
+  #globalHeader nav.menu.open ul li {
+    background: left top no-repeat;
+    background-size: 100%;
+    border: none;
+    float: left;
+    width: 25%;
+  }
+
+  #globalHeader nav.menu ul li.service,
+  #globalHeader nav.menu.open ul li.service {
+/*    background-image: url(../images/nav_header_service.png); */
+  }
+
+  #globalHeader nav.menu ul li.proven,
+  #globalHeader nav.menu.open ul li.proven {
+/*    background-image: url(../images/nav_header_proven.png); */
+  }
+
+  #globalHeader nav.menu ul li.corporate,
+  #globalHeader nav.menu.open ul li.corporate {
+/*    background-image: url(../images/nav_header_corporate.png); */
+  }
+
+  #globalHeader nav.menu ul li.recruit,
+  #globalHeader nav.menu.open ul li.recruit {
+/*    background-image: url(../images/nav_header_recruit.png); */
+  }
+
+  #globalHeader nav.menu ul li a,
+  #globalHeader nav.menu.open ul li a {
+    border: none;
+    display: block;
+    height: 44px;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 100%;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  #globalHeader nav.menu ul li a:hover,
+  #globalHeader nav.menu.open ul li a:hover {
+    background: #fff;
+    opacity: 0.2;
+  }
+ 
+  #globalHeader .search {
+    position: absolute;
+    right: 0;
+    top: 35px;
+  }
+
+  #globalHeader .search #searchToggle {
+    display: none;
+  }
+ 
+  #globalHeader div.search div.form {
+    -webkit-box-shadow: none;
+    background: none;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    position: static;
+  }
+
+  #globalHeader div.search form {
+    display: block;
+    width: 350px;
+  }
+
+  #globalHeader div.search form span {
+    display: inline;
+    float: left;
+    padding: 0 !important;
+    width: auto !important;
+  }
+
+  #globalHeader div.search form span:last-child:hover {
+    background: #fff;
+    opacity: 0.7;
+  }
+
+  #globalHeader div.search form input[type="search"] {
+    border-radius: 5px 0 0 5px;
+    margin: 0;
+    padding: 8px 0 7px;
+    width: 258px;
+  }
+
+  #globalHeader div.search div.form button {
+    background: url(../images/btn_search.png) left top no-repeat;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 33px;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: 100%;
+    text-shadow: none;
+    white-space: nowrap;
+    width: 92px ;
+  }
+
+  #globalHeader div.menu.open,
+  #globalHeader div.search.open {
+    background: none;
+  }
+
+  #body {
+    margin: 15px auto 0;
+    width: 768px;
+  }
+
+  div.alert {
+    margin-top: 18px;
+  }
+
+  div.alert ul li a {
+    padding-left: 11.2em;
+  }
+
+  div.alert ul li a span {
+    color: #777;
+    display: block;
+    float: left;
+    margin-left: -9em;
+    padding-left: 10px;
+    width: 8em;
+  }
+
+  #pickup ul.tab {
+    display: none;
+  }
+
+  #pickup h3, 
+  #pickup div.tabContents,
+  div.indexBoxes div.captionBox {
+    display: block;
+  }
+
+  #pickup {
+/*    background: url(../images/bg_pickup_gte_768.jpg) left top no-repeat;*/
+    background-size: 100%;
+    margin-top: 18px;
+    padding: 0 18px 0;
+  }
+
+  #pickup h2 {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+
+  #pickup div.tabContents {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    padding: 0 18px 0 0;
+    width: 33.3%;
+  }
+
+  #pickup div.tabContents:last-child {
+    padding: 0;
+  }
+
+  #pickup div.round {
+    border-radius: 5px !important;
+  }
+
+  #pickup div.round a:hover {
+    text-decoration: none;
+  }
+
+  #pickup div.round div {
+    display: table;
+    height: 105px;
+    width: 100%;
+  }
+
+  #pickup div.round div p {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  #pickup div.round div p img {
+    width: 50%;
+  }
+
+  #pickup div.tabContents p.text {
+    margin: 10px 10px;
+  }
+
+  div.columnWrapper {
+    margin-top: 18px;
+  }
+
+  div.indexBoxes {
+    float: left;
+    margin: 0;
+    width: 68.2%;
+  }
+
+  div.indexBoxes section.child {
+    border: none !important;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    margin-bottom: 12px;
+    padding-right: 18px;
+    width: 50%;
+  }
+
+  div.indexBoxes section.child a:hover {
+    text-decoration: none;
+  }
+
+  div.indexBoxes section.child a h2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  div.indexBoxes section.child a:hover h2 {
+    text-decoration: underline;
+  }
+
+  div.indexBoxes section.child a div.captionBox {
+    margin-top: 12px;
+  }
+
+  div.indexBoxes section.child a div.captionBox div.image {
+    border: 1px solid #ccc;
+    clear: left;
+    float: left;
+    margin-right: 12px;
+    padding: 3px;
+  }
+
+  div.indexBoxes section.child a div.captionBox div.image img {
+    vertical-align: top;
+  }
+
+  section.seminar {
+    float: right;
+    width: 31.8%;
+  }
+ 
+  section.information {
+    border: none;
+    margin-top: 18px;
+  }
+
+  section.seminar h2,
+  section.information h2 {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  } 
+
+  .toggle.close dl {
+    display: block !important;
+  }
+
+  dl.informationLink dt {
+    padding: 0 10px;
+    width: auto;
+  }
+
+  dl.informationLink dd {
+    background: none;
+    border-top: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  dl.informationLink dd a {
+    padding: 12px 10px;
+  }
+ 
+  section.information dl.informationLink dt {
+    width: 8em;
+  }
+
+  section.information dl.informationLink dd a {
+    padding-left: 10em;
+  }
+
+  .toggle h2 {
+    cursor: default;
+  }
+
+  .toggle h2 span,
+  .toggle.close h2 span {
+    background: none !important;
+  }
+
+  #slide {
+    background: #fff;
+    border: 1px solid #d6d6d6;
+    padding: 5px;
+  }
+
+  #globalFooter nav {
+    background: #eaeaea;
+  }
+
+  #globalFooter nav ul {
+    margin: 0 auto;
+    padding: 16px 6px;
+    width: 756px;
+  }
+
+  #globalFooter nav ul li {
+    border: none;
+    margin-right: 30px;
+    width: auto;
+  }
+
+  #globalFooter nav ul li:nth-child(odd) {
+    clear: none;
+  }
+
+  #globalFooter nav ul li a {
+    background: url(../images/icon_arrow_gray_gte_768.png) left center no-repeat;
+    border: none;
+    padding-left: 12px;
+    width: auto;
+  }
+
+  #globalHeader nav ul:after,
+  #globalHeader div.search form:after,
+  #pickup:after,
+  .columnWrapper:after,
+  div.indexBoxes section.child:after,
+  div.indexBoxes section.child a div.captionBox:after {  
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+@media screen and (min-width:960px){
+  #globalHeader .headerInner {
+    width: 960px;
+  }
+
+  #globalHeader nav.menu ul,
+  #globalHeader nav.menu.open ul {
+    width: 960px;
+  }
+
+  #globalHeader nav.menu ul li a,
+  #globalHeader nav.menu.open ul li a {
+    height: 55px;
+  }
+
+  #body {
+    width: 960px;
+  }
+
+  #pickup h2 {
+    padding: 15px 0;
+  }
+
+  #pickup div.round h3 {
+    font-size: 20px;
+  }
+
+  #pickup div.round div {
+    height: 152px;
+  }
+
+  #pickup div.round div p img {
+    width: auto;
+  }
+
+  #pickup div.tabContents p.text {
+    margin: 21px 10px;
+  }
+
+  #globalFooter nav ul {
+    width: 948px;
+  }
+}

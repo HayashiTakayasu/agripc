@@ -1,0 +1,1 @@
+usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_20130903008-if00-port0

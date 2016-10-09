@@ -1,0 +1,34 @@
+
+#on your product folder
+cd ~/Desktop/ma/bin/product
+
+wget agripc.org/backup.rb
+wget agripc.org/backup_data.rb
+
+##change "#{USER_NAME}" > ./user_name.txt
+echo "_kasugai" > ./user_name.txt
+
+##SAVE PATH
+##create directory "product/bin_ac/htdocs/data"
+
+##main_ma (day change)
+p name=File.read("./user_name.txt").chomp
+
+   begin
+      if  Time.now.day!= File::stat("bin_ac/htdocs/data/data{name}.tar.gz").mtime.day
+        `ruby ./backup_data.rb`
+      else
+        p "data is today"
+      end
+    rescue
+    end
+    sleep 5
+    begin
+      if Time.now.day!= File::stat("bin_ac/htdocs/data/backup_program#{name}.tar.gz").mtime.day
+        `ruby ./backup.rb`
+      else
+        p "backup is today"
+      end
+    rescue
+    end
+

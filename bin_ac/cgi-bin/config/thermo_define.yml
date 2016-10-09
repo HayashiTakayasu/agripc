@@ -1,0 +1,4 @@
+---
+thermo_define.yml:
+- /dev/ttyS0
+- 5

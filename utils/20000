@@ -1,0 +1,14 @@
+exit
+ping 192.168.1.28
+sh cpu_temp.sh 
+sh search_pi 
+ssh pi@192.168.1.39
+pwd
+ssh agripc@agripc.sakura.ne.jp
+exit
+sh ./search_pi 
+ifconfig
+ssh pi@192.168.1.39
+cd ma/utils/
+sh ./search_pi 
+ssh pi@192.168.1.39

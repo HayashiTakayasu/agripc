@@ -1,0 +1,7 @@
+        require "agri-controller"
+        include AgriController
+        p dacs=Serial.new("r0\r",dacs_port="/dev/ttyUSB1")
+        dacs.time_out=1
+        dacs.set
+        res=dacs.serial
+         p res

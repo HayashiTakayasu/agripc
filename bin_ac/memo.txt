@@ -1,0 +1,4 @@
+memo
+  cgi-binの編成がおかしい
+　　log
+　　　old_log

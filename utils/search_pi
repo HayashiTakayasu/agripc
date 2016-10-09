@@ -1,0 +1,3 @@
+for i in `seq 1 255`; do
+ping -t 1 -n -c 1 192.168.1.$i 2> /dev/null &
+done | grep 'bytes from'

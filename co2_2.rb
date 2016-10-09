@@ -1,0 +1,110 @@
+require "agri-controller"
+require "redis"
+require "./setting_io"
+require "./counter"
+include AgriController
+
+burn_sec=300
+
+db=Redis.new
+name="co2_2"
+ppm_refer="ppm"#ppm_refer
+degree_refer="degree"
+
+#IO reference
+co2_bit="H"#co2
+heater_fan_bit=""#heater_fan
+
+
+
+ary_before=nil
+change=nil
+obj=nil
+loop do
+  p ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
+  p name+" , "+ary.to_s
+  if ary!=ary_before
+    obj=N_dan_thermo.new(ary,diff=10,dead_time=10,changed_time=Time.now)
+    #p fan.list
+    ary_before=ary
+  end
+  
+
+  num=db.get(ppm_refer).to_f
+    
+    degree=db.get(degree_refer).to_f       #add 20151003
+    fan_set=db.get("fan_set_now").to_f #add
+    fan=db.get("fan")                  #add "on" or "off"
+    
+    w1=db.get("window1:step").to_f
+    w2=db.get("window2:step").to_f
+    w3=db.get("window3:step").to_f
+    ###other targets
+    ##"on","off"
+    #heater=db.get("heater")
+    #co2=db.get("co2")
+    
+    ##high,low
+    #rh=db.get("usbrh:humidity").to_f
+    #housa_=db.get("housa").to_f
+    
+    #if heater=="on" or co2=="on" or (rh>85.0) or housa_<2.0
+    #  bit=true
+    #end
+    
+    bit=(obj.set_now > num)
+    
+    unless w1<2 and w2<2 and w3<2 and fan=="off" and (fan_set-degree > 1.5) and num > 0
+      bit=false
+    end
+    #p bit.bit
+    if bit
+      #p change=bit
+      p obj.set_now 
+      p num
+      
+      #on
+      db.set(name,"on")#for circulator
+      sleep 5
+      db.rpush(:numato,"relay on "+co2_bit)#co2
+      sleep 3
+      db.rpush(:numato,"relay on "+heater_fan_bit) if heater_fan_bit!=""#heater_fan
+      
+      6.times do       
+        sleep burn_sec
+        
+        ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
+        obj=N_dan_thermo.new(ary,diff=10,dead_time=10,changed_time=Time.now)
+        num=db.get(ppm_refer).to_f
+        bit=(obj.set_now > num+80)
+        
+        fan_set=db.get("fan_set_now").to_f #add
+        fan=db.get("fan")                  #add "on" or "off"
+        
+        w1=db.get("window1:step").to_f
+        w2=db.get("window2:step").to_f
+        w3=db.get("window3:step").to_f
+        unless w1<2 and w2<2 and w3<2 and fan=="off" and (fan_set-degree > 1.5) and num > 0
+          bit=false
+        end        
+        #co2 feed continue?
+        if bit
+          next
+        else
+          break
+        end
+      end      
+      
+      #off
+      db.rpush(:numato,"relay off "+co2_bit)#co2
+      sleep 1
+      db.rpush(:numato,"relay off "+heater_fan_bit) if heater_fan_bit!=""#heater_fan
+      sleep 180
+      db.set(name,"off")#for circulator
+      
+      counter("./log/#{name}_min.txt",burn_sec/60.0)
+      p "end"
+    end
+    sleep 60
+
+end

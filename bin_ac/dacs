@@ -1,0 +1,36 @@
+#!ruby
+#coding:utf-8
+require "rubygems"
+require "agri-controller"
+include AgriController
+#load "serial.rb"
+
+3.times do |x|
+  p port_="/dev/ttyUSB#{x.to_s}"
+    if RUBY_PLATFORM.include?("linux")
+        b=Bit.new(rand(2**24))
+       str=b.tos(6,16)
+       a=Serial.new
+       a.port=port_#"/dev/ttyUSB1"
+       a.speed=9600
+       a.command="W0FFFFFF\r"#"W0FFFFFF\r"
+       a.serial
+  sleep 0.5
+      5.times do
+        b.bit=rand(2**24)
+        str=b.tos(6,16)
+        a.command="W0"+str+"&"#"\r"#"W0FFFFFF\r"
+        res=a.serial
+        unless res
+          res=a.serial
+        end
+        p res
+        #p a
+        sleep 0.05
+      end
+      sleep 0.5
+      a.command="W0000000\r"#"W0FFFFFF\r"
+      a.serial
+
+    end
+end

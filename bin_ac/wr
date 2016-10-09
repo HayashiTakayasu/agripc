@@ -1,0 +1,45 @@
+#!ruby
+#coding:utf-8
+#require "usual"
+require "rubygems"
+require "agri-controller"
+include AgriController
+
+3.times do |x|
+  p port_="/dev/ttyUSB#{x.to_s}"
+    if RUBY_PLATFORM.include?("linux")
+       # b=Bit.new(rand(2**24))
+       #str=b.tos(6,16)
+       p a=Serial.new(WR1010::send_sample(5),port_,57600,10)
+       a.set
+       #a=Serial.new
+       #a.port=port_#"/dev/ttyUSB1"
+       #a.speed=57600
+       #a.time_out=10
+       #a.command="%01#RDD0000000019**\r"#"W0FFFFFF\r"#"W0FFFFFF\r"
+       res=a.serial
+       p a.res
+  sleep 0.5
+      5.times do
+        #b.bit=rand(2**24)
+        #str=b.tos(6,16)
+        #a.command="W0"+str+"&"#"\r"#"W0FFFFFF\r"
+        res=a.serial
+        unless res
+          puts "2times"
+          res=a.serial
+        end
+        p res
+        #if res.class==String
+        p Bcc::bcc?(res)
+          p WR1010::toa(res) if Bcc::bcc?(res)
+        #end
+        #p a
+        sleep 0.05
+      end
+      #sleep 0.5
+      #a.command="W0000000\r"#"W0FFFFFF\r"
+      #a.serial
+
+    end
+end

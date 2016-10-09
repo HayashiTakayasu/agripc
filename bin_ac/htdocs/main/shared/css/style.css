@@ -1,0 +1,591 @@
+@charset "utf-8";
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000; 
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;   
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+
+/*  Common Elements
+---------------------------------------------------------- */
+
+body {
+  color: #333;
+  font: 14px/1.3 sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+
+/*  Header
+---------------------------------------------------------- */
+
+#globalHeader {
+  background: #efefef;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#efefef), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #efefef, #ffffff);
+  background-image: linear-gradient(to bottom, #efefef, #ffffff);
+  border-bottom: 1px solid #ccc;
+  padding: 10px 5px;
+}
+
+#globalHeader h1 {
+  float: left;
+  line-height: 0;
+  padding: 5px 0 0 5px;
+}
+
+#globalHeader h1 img {
+  vertical-align: top;
+}
+
+
+/*  Body
+---------------------------------------------------------- */
+
+#slide img {
+  height: auto;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* Alert */
+div.alert {
+  background: #ddd;
+  padding: 10px;
+}
+
+div.alert ul {
+  background: #fff;
+  border: 1px solid #ababab;
+  border-radius: 5px;
+}
+
+div.alert ul li {
+  list-style: none;
+}
+
+div.alert ul li a {
+  background: url(../images/icon_alert.png) no-repeat 10px 10px;
+  display: block;
+  padding: 12px 20px 12px 40px;
+}
+
+/* Pick Up */
+
+#pickup {
+  background: url(../images/bg_pickup.jpg) no-repeat 0 0;
+  background-size: 100% auto;
+  color: #fff;
+  padding: 5px;
+}
+
+#pickup h2 {
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 5px;
+}
+
+#pickup ul.tab {
+  display: table;
+  width: 100%;
+}
+
+#pickup ul.tab li {
+  display: table-cell;
+  width: 33%;
+}
+
+#pickup ul.tab li a {
+  background: #aaa;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#eeedf2), color-stop(0.04, #717171), color-stop(0.74, #2b2b2b), to(#2b2b2b));
+  background-image: -webkit-linear-gradient(top, #eeedf2, #717171 4%, #2b2b2b 74%);
+  background-image: linear-gradient(to bottom, #eeedf2, #717171 4%, #2b2b2b 74%);
+  border: 1px solid #444444;
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  -webkit-box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: block;
+  font-weight: bold;
+  margin: 0 2px;
+  padding: 10px 0;
+  text-align: center;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+#pickup ul.tab li.current a {
+  background: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), color-stop(0.29, #fff), to(#ffffff));
+  background-image: -webkit-linear-gradient(top, #e9e9e9 0%, #ffffff 29%);
+  background-image: linear-gradient(to bottom, #e9e9e9 0%, #ffffff 29%);
+  color: #000;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.2), 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+#pickup div.tabContents {
+  display: none;
+  padding: 0 3px;
+}
+
+#pickup div.tabContents.current {
+  display: block;
+}
+
+#pickup div.round {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(0.14, #fff), to(#dfdddd));
+  background-image: -webkit-linear-gradient(top, #fff 14%, #dfdddd 100%);
+  background-image: linear-gradient(to bottom, #fff 14%, #dfdddd 100%);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  padding: 10px;
+  text-align: center;
+}
+
+#pickup div.round a {
+  background: url(../images/icon_arrow_black_large.png) no-repeat 100% 50%;
+  display: block;
+}
+
+#pickup div.tabContents p.text {
+  margin: 10px;
+}
+
+div.indexBoxes {
+  margin: 0 0 20px 0;
+}
+
+div.indexBoxes ul {
+  border-bottom: 1px solid #ccc;
+}
+
+div.indexBoxes ul li,
+section.seminar h2,
+section.information h2 {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#efefef));
+  background-image: -webkit-linear-gradient(top, #ffffff, #efefef);
+  background-image: linear-gradient(to bottom, #ffffff, #efefef);
+  border-top: 1px solid #ccc;
+}
+
+div.indexBoxes ul li a,
+section.seminar h2 span,
+section.information h2 span {
+  background: url(../images/icon_arrow_black.png) no-repeat 100% 50%;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  line-hegiht: 1;
+  padding: 12px 10px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+section.seminar h2 span,
+section.information h2 span {
+  background-image: none;
+}
+
+ul.informationLink li {
+  border-top: 1px solid #ccc;
+  list-style: none;
+}
+
+ul.informationLink li a {
+  background: url(../images/icon_arrow_gray.png) no-repeat 100% 50%;
+  display: block;
+  margin: 0;
+  padding: 12px 30px 12px 9em;
+}
+
+ul.informationLink li a span.date {
+  color: #777;
+  display: block;
+  float: left;
+  margin-left: -9em;
+  padding-left: 10px;
+  width: 8em;
+}
+
+section.information {
+  border-bottom: 1px solid #ccc;
+  margin: 0 0 20px 0;
+}
+
+
+/*  Footer
+---------------------------------------------------------- */
+
+#globalFooter nav ul {
+  background: #eaeaea;
+}
+
+#globalFooter nav ul li {
+  border: 1px solid #ccc;
+  border-bottom: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  text-align: center;
+  width: 50%;
+}
+
+#globalFooter nav ul li a {
+  display: block;
+  padding: 10px 0;
+}
+
+#globalFooter nav ul li:nth-child(odd) {
+  border-left: none;
+  clear: left;
+}
+
+#globalFooter nav ul li:nth-child(even) {
+  border-right: none;
+  margin-left: -1px;
+}
+
+#globalFooter p#copyright {
+  background: #2f2f2f;
+  color: #fff;
+  font-family: helvetica, arial;
+  padding: 15px 0;
+  text-align: center;
+}
+
+/* clearfix */
+#globalHeader:after,
+#globalFooter nav ul:after {
+  content: ""; 
+  display: block; 
+  clear: both;
+}
+
+
+/*  devicePixelRatio: 2.0
+---------------------------------------------------------- */
+
+@media only screen and (-webkit-min-device-pixel-ratio:2){
+
+  div.alert ul li a {
+    background-image:url(../images/icon_alert_2x.png);
+    background-size: 21px 21px;
+  }
+
+  #pickup div.round a {
+    background-image: url(../images/icon_arrow_black_large_2x.png);
+    background-size: 11px 17px;
+  }
+
+  div.indexBoxes ul li a {
+    background-image: url(../images/icon_arrow_black_2x.png);
+    background-size: 18px 13px;
+  }
+
+  ul.informationLink li a {
+    background-image: url(../images/icon_arrow_gray_2x.png);
+    background-size: 18px 13px;
+  }
+
+}
+
+
+/*  3章
+---------------------------------------------------------- */
+
+body.removeHighlight {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#globalHeader {
+  padding-bottom: 0;
+}
+
+#globalHeader nav,
+#globalHeader div.search {
+  float: right;
+  margin: 0 0 0 5px;
+}
+
+#globalHeader nav ul,
+#globalHeader div.search div.form {
+  display: none;
+}
+
+#globalHeader nav p#menuToggle,
+#globalHeader div.search p#searchToggle,
+#globalHeader div.search div.form button {
+  background: #2b2b2b;
+  background: -webkit-gradient(linear, left top, left bottom, from(#eeedf2), color-stop(0.04, #717171), color-stop(0.84, #2b2b2b), to(#2b2b2b));
+  background: -webkit-linear-gradient(top, #eeedf2 1%, #717171 4%, #2b2b2b 84%);
+  background: linear-gradient(to bottom, #eeedf2 1%, #717171 4%, #2b2b2b 84%);
+  border: 1px solid #444;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  font-weight: bold;
+  padding: 7px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 1), 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+#globalHeader nav {
+  padding-bottom: 10px;
+}
+
+#globalHeader nav p#menuToggle {
+  line-height: 23px;
+  padding: 5px 10px;
+  width: 100px;
+}
+
+#globalHeader nav p#menuToggle span {
+  background-image: url(../images/icon_arrow_down_white.png), url(../images/bg_line.png);
+  background-position: 100% 50%, 75px 50%;
+  background-repeat: no-repeat, repeat-y;
+  background-size: auto auto, 2px auto;
+  display: block;
+  padding-left: 9px;
+}
+
+#globalHeader nav.open {
+  display: block;
+  background: url(../images/bg_dropdown.png) no-repeat 90% 100%;
+  background-size: 12px;
+}
+
+#globalHeader nav.open ul {
+  background: #333;
+  border-bottom: 1px solid #000;
+  -webkit-box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.4);
+  box-shadow:0 3px 5px 0px rgba(0, 0, 0, 0.4);
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  z-index: 99;
+}
+
+#globalHeader nav.open ul li {
+  border-top: 1px solid #000;
+}
+
+#globalHeader nav.open ul li a {
+  border-top: 1px solid #666;
+  color: #fff;
+  display: block;
+  padding: 10px;
+}
+
+#globalHeader nav.open ul li:first-child,
+#globalHeader nav.open ul li:first-child a {
+  border-top: none;
+}
+
+#globalHeader div.search {
+  padding-bottom: 10px;
+}
+
+#globalHeader div.search.open {
+  background: url(../images/bg_dropdown.png) no-repeat 50% 100%;
+  background-size: 12px;
+}
+
+#globalHeader div.search.open div.form {
+  display: block;
+}
+
+#globalHeader div.search p#searchToggle {
+  font-size: 1px;
+  line-height: 0;
+}
+
+#globalHeader div.search p#searchToggle img {
+  vertical-align: top;
+}
+
+#globalHeader div.search div.form {
+  background: #333;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 3px 3px 0px rgba(0, 0, 0, 0.3);
+  box-shadow:0 3px 3px 0px rgba(0, 0, 0, 0.3);
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  top: 55px;
+  width: 100%;
+  z-index: 99;
+}
+
+#globalHeader div.search form {
+  display: table;
+  width: 100%;
+}
+
+#globalHeader div.search form span {
+  display: table-cell;
+}
+
+#globalHeader div.search form span:last-child {
+  padding-left: 10px;
+  width: 60px;
+}
+
+#globalHeader div.search form input[type="search"] {
+ -webkit-appearance: textfield;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 14px;
+  padding: 7px 5px;
+  width: 100%;
+}
+
+#globalHeader div.search form button {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 14px;
+  padding-left: 0;
+  padding-right: 0;
+  width: 60px;
+}
+
+.toggle h2 span {
+  background-image: url(../images/icon_minus_white.png) !important;
+}
+
+.toggle.close h2 span {
+  background-image: url(../images/icon_plus_white.png) !important;
+}
+
+.toggle.close ul {
+  display: none;
+}
+
+
+@media screen and (-webkit-min-device-pixel-ratio:2){
+
+  #globalHeader nav p.menu span {
+    background-image: url(../images/icon_arrow_down_white_2x.png), url(../images/bg_line.png);
+    background-size: 10px 6px, 1px auto;
+  }
+
+  .toggle h2 span {
+    background-image: url(../images/icon_minus_white_2x.png) !important;
+    background-size: 34px 24px !important;
+  }
+
+  .toggle.close h2 span {
+    background-image: url(../images/icon_plus_white_2x.png) !important;
+    background-size: 34px 24px !important;
+  }
+
+}

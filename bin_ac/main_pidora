@@ -1,0 +1,19 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+cd `dirname $0`
+ruby ttyUSB_watchdog.rb &
+
+ruby main.rb &
+ruby server.rb &
+#xterm -e ruby history_of_data.rb &
+
+#sh tty &
+
+#firefox 127.0.0.1:10080/cgi-bin/main.cgi &
+
+#cd /home/agri/www
+#xterm -e motion &
+

@@ -1,0 +1,2 @@
+[16756] 08 Oct 12:00:58.285 # Unable to set the max number of files limit to 10032 (Operation not permitted), setting the max clients configuration to 3984.
+[16756] 08 Oct 12:00:58.286 # Creating Server TCP listening socket *:6379: bind: Address already in use
