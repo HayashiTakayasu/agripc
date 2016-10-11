@@ -1,3 +1,6 @@
 *~
 .*~
 */htdocs/data/*
+*/messages/messaege*
+log/*.txt.*
+thermo_data/thermo_data*.txt.*

@@ -7,7 +7,7 @@ Dir.chdir(str+"/bin_ac/htdocs")
 #p Dir.glob("*")
 p Dir.pwd
 #day=Date.today.to_s
-#p command="zip -rq ./data/data#{name}.zip thermo log"
-p command="tar zcfh ./data/data#{name}.tar.gz thermo log"
+#p command="zip -rq ./data/data_#{name}.zip thermo log"
+p command="tar zcfh ./data/data_#{name}.tar.gz thermo log"
 `#{command}` unless $DEBUG
 

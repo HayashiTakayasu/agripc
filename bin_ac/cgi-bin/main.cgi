@@ -102,7 +102,8 @@ str= <<eos
 <h4>時刻：#{Time.now}　<a href="./time_adjust.cgi">時刻の変更をする</a><br/>#{tenki}   雨センサ：#{rain_sensor}</h4>
 
 <a href="./thermo_graph.cgi">昨日と今日の温湿度グラフ(graph)</a>　　<!-- a href="./keitai.cgi">携帯で温度確認する、サンプル画面</a --><br/>
-<h2><a href="../">top</a>　　　<a href="../main">携帯用画面</a>　　　<a href="http://192.168.11.200:10080/main">センサー側の状況・停止等</a></h2>
+<h2><a href="../">top</a>　　　<a href="../main">携帯用画面</a>　　　<a href="http://192.168.11.200:10080/main">センサー側の状況・停止等</a>
+　　<a href="../data">バックアップデータ</a>　</h2>
 <hr/>
 センサー状況
 <table border="1">

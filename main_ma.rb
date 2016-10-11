@@ -63,9 +63,9 @@ loop do
       Loger::loger("log/window1_step.txt",Time.now.strftime("%Y-%m-%d %H:%M:%S")+",  0")
     end
     begin
-      file="bin_ac/htdocs/data/data#{name}.tar.gz"
+      file="bin_ac/htdocs/data/data_#{name}.tar.gz"
        `touch #{file}` unless File.exist?(file)
-      if  Time.now.day!= File::stat("bin_ac/htdocs/data/data#{name}.tar.gz").mtime.day
+      if  Time.now.day!= File::stat("bin_ac/htdocs/data/data_#{name}.tar.gz").mtime.day
         p "backup_data"
         `ruby ./backup_data.rb`
       else
@@ -76,11 +76,11 @@ loop do
     end
     sleep 5
     begin
-      file="bin_ac/htdocs/data/backup_program#{name}.tar.gz"
+      file="bin_ac/htdocs/data/backup_program_#{name}.tar.gz"
       `touch #{file}` unless File.exist?(file)
-      if Time.now.day!= File::stat("bin_ac/htdocs/data/backup_program#{name}.tar.gz").mtime.day
+      if Time.now.day!= File::stat("bin_ac/htdocs/data/backup_#{name}.tar.gz").mtime.day
         p "All backup"
-        `ruby ./backup.rb`
+        `ruby ./backup_all.rb`
       else
         p "backup is today"
       end
