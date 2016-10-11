@@ -1,7 +1,0 @@
-# Logfile created on 2016-09-23 10:30:00 +0900 by logger.rb/41954
-2016-09-23 10:30:00 +0900,set:20:now:21.36:step:1,open:true,close:false,emargency:false,1
-2016-09-23 10:30:20 +0900,set:20:now:21.36:step:1,open:false,close:false,emargency:false,1
-2016-09-23 10:30:54 +0900,set:20:now:21.36:step:2,open:true,close:false,emargency:false,2
-2016-09-23 10:31:14 +0900,set:20:now:21.36:step:2,open:false,close:false,emargency:false,2
-2016-09-23 10:40:00 +0900,set:25:now:21.36:step:0,open:false,close:true,emargency:true,0
-2016-09-23 11:02:02 +0900,set:25:now:21.36:step:0,open:false,close:true,emargency:true,0

@@ -6,3 +6,5 @@
 2016-10-11 11:55:21 +0900,set:25:now:26.1:step:2,open:false,close:false,emargency:false,2
 2016-10-11 12:30:00 +0900,set:25:now:26.6:step:3,open:true,close:false,emargency:false,3
 2016-10-11 12:30:21 +0900,set:25:now:26.6:step:3,open:false,close:false,emargency:false,3
+2016-10-11 15:48:08 +0900,set:25:now:26.1:step:0,open:false,close:true,emargency:false,0
+2016-10-11 15:59:14 +0900,set:25:now:26.1:step:0,open:false,close:true,emargency:false,0
