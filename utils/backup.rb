@@ -8,12 +8,12 @@ name=["agripc","ma"]
 name.each do |dir|
   print "backup : "+dir
   begin  #cp messages
-    Dir.chdir(dir+"/messages")
+    Dir.chdir("/messages")
     puts ""  
     `rm -rf messages*`
     p "ruby ./cp_mes.rb"
     `ruby ./cp_mes.rb`
-    Dir.chdir(pwd)
+    Dir.chdir(pwd+"../")
     p Dir.pwd
 
     #ac backup

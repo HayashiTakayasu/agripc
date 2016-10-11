@@ -55,3 +55,34 @@ Oct 11 08:57:51 localhost kernel: usb 2-1: configuration #1 chosen from 1 choice
 Oct 11 08:57:51 localhost kernel: usb 2-1: ep 0x81 - rounding interval to 64 microframes, ep desc says 80 microframes
 Oct 11 08:57:51 localhost kernel: input: USB Optical Mouse as /devices/pci0000:00/0000:00:14.0/usb2/2-1/2-1:1.0/input/input13
 Oct 11 08:57:51 localhost kernel: generic-usb 0003:1BCF:0007.0001: input,hiddev96,hidraw0: USB HID v1.10 Mouse [USB Optical Mouse] on usb-0000:00:14.0-1/input0
+Oct 11 09:31:42 localhost gnome-keyring-daemon[3119]: removing removable location: /media/DATA
+Oct 11 09:31:42 localhost gnome-keyring-daemon[3119]: no volume registered at: /media/DATA
+Oct 11 09:31:42 localhost kernel: usb 2-2: USB disconnect, device number 8
+Oct 11 09:32:04 localhost bonobo-activation-server (agri-2003): could not associate with desktop session: Failed to connect to socket /tmp/dbus-49uGqSgEFo: 接続を拒否されました
+Oct 11 09:32:04 localhost abrt[2010]: abrtd is not running. If it crashed, /proc/sys/kernel/core_pattern contains a stale value, consider resetting it to 'core'
+Oct 11 09:32:06 localhost rtkit-daemon[2909]: Sucessfully made thread 2072 of process 2072 (/usr/bin/pulseaudio) owned by '42' high priority at nice level -11.
+Oct 11 09:32:06 localhost pulseaudio[2072]: conf-parser.c: [/usr/share/pulseaudio/alsa-mixer/paths/hdmi-output-0.conf:6] Unknown lvalue 'required-any' in section 'Jack HDMI/DP,pcm=3'.
+Oct 11 09:32:06 localhost rtkit-daemon[2909]: Sucessfully made thread 2073 of process 2072 (/usr/bin/pulseaudio) owned by '42' RT at priority 5.
+Oct 11 09:32:06 localhost rtkit-daemon[2909]: Sucessfully made thread 2075 of process 2072 (/usr/bin/pulseaudio) owned by '42' RT at priority 5.
+Oct 11 09:32:06 localhost dbus-daemon: [system] Rejected send message, 1 matched rules; type="method_call", sender=":1.137" (uid=42 pid=2059 comm="gnome-power-manager) interface="org.freedesktop.Hal.Device.LaptopPanel" member="GetBrightness" error name="(unset)" requested_reply=0 destination=":1.6" (uid=0 pid=2286 comm="hald))
+Oct 11 09:32:06 localhost rtkit-daemon[2909]: Sucessfully made thread 2076 of process 2072 (/usr/bin/pulseaudio) owned by '42' RT at priority 5.
+Oct 11 09:32:12 localhost dbus-daemon: [system] Rejected send message, 2 matched rules; type="method_return", sender=":1.12" (uid=0 pid=2404 comm="/usr/sbin/bluetoothd) interface="(unset)" member="(unset)" error name="(unset)" requested_reply=0 destination=":1.149" (uid=500 pid=2333 comm="bluetooth-applet))
+Oct 11 09:32:12 localhost rtkit-daemon[2909]: Sucessfully made thread 2391 of process 2391 (/usr/bin/pulseaudio) owned by '500' high priority at nice level -11.
+Oct 11 09:32:12 localhost pulseaudio[2391]: pid.c: Daemon already running.
+Oct 11 12:31:31 localhost kernel: usb 2-2: new high speed USB device number 10 using xhci_hcd
+Oct 11 12:31:31 localhost kernel: usb 2-2: New USB device found, idVendor=056e, idProduct=6007
+Oct 11 12:31:31 localhost kernel: usb 2-2: New USB device strings: Mfr=1, Product=2, SerialNumber=3
+Oct 11 12:31:31 localhost kernel: usb 2-2: Product: MF-HSU2
+Oct 11 12:31:31 localhost kernel: usb 2-2: Manufacturer: ELECOM
+Oct 11 12:31:31 localhost kernel: usb 2-2: SerialNumber: 07082CB402907176
+Oct 11 12:31:31 localhost kernel: usb 2-2: configuration #1 chosen from 1 choice
+Oct 11 12:31:31 localhost kernel: scsi4 : SCSI emulation for USB Mass Storage devices
+Oct 11 12:31:32 localhost kernel: scsi 4:0:0:0: Direct-Access     ELECOM   MF-HSU2          PMAP PQ: 0 ANSI: 4
+Oct 11 12:31:32 localhost kernel: sd 4:0:0:0: Attached scsi generic sg2 type 0
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] 15124992 512-byte logical blocks: (7.74 GB/7.21 GiB)
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] Write Protect is off
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] Assuming drive cache: write through
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] Assuming drive cache: write through
+Oct 11 12:31:34 localhost kernel: sdb: sdb1
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] Assuming drive cache: write through
+Oct 11 12:31:34 localhost kernel: sd 4:0:0:0: [sdb] Attached SCSI removable disk
