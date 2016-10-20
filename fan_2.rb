@@ -8,7 +8,7 @@ include AgriController
 db=Redis.new
 name="fan_2"
 io_bit="L"
-degree_ref="degree"
+degree_ref="degree_2"
 
 ary_before=nil
 change=nil
@@ -18,7 +18,7 @@ loop do
   if ary!=ary_before
     fan=N_dan_thermo.new(ary,diff=1,dead_time=5,changed_time=Time.now)
     degree=fan.set_now.to_s
-    db.set("fan_set_now",degree)
+    db.set("#{name}_set_now",degree)
     #p fan.list
     ary_before=ary
   end

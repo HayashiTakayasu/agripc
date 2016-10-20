@@ -32,8 +32,8 @@ sleep 2
 
 catch :reset_signal do
   house1=N_dan_thermo.new(temp_config)#read data
-  window=Value_controller.new(steps=6,open_sec=20,#55
-    down_sec=18,#35,
+  window=Value_controller.new(steps=7,open_sec=25,#55
+    down_sec=23,#35,
     sensitivity=0.5,set=17,dead=30,true,false)
   p window
   #default_value
@@ -48,7 +48,7 @@ catch :reset_signal do
       begin
         #data=thermo_read("http://127.0.0.1:8000/last_data")
         #data=File.read("./last_data").chomp
-        data=db.get("degree")
+        data=db.get("degree_1")
         temp=data.to_f
         #if data.class==String
         #temp=data.split(",")[1].to_f

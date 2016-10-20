@@ -31,12 +31,17 @@ set style line 8 linecolor rgbcolor "dark-green" linewidth 2
 
 #grey yellow light-green cyan magenta turquoise pink salmon khaki orange
 
-plot "thermo_data/thermo_data2.txt" using 1:2 with lines title "温度 ℃" ls 1 ,\
-     "thermo_data/thermo_data2.txt" using 1:6 with lines title "地温℃" ls 2,\
-     "thermo_data/thermo_data2.txt" using 1:($3/3) with lines title "湿度(1/3)"  ls 3,\
-     "thermo_data/thermo_data2.txt" using 1:($4/100) with lines title "ppm(1/100)" ls 8,\
-     "thermo_data/thermo_data2.txt" using 1:5 with lines title "飽差g/m3" ls 4
-#     "thermo_data/thermo_data2.txt" using 1:7 with lines title "温度(1)℃" ls 7,\
+plot "thermo_data/thermo_data2.txt" using 1:7 with lines title "温度1℃" ls 1 ,\
+     "thermo_data/thermo_data2.txt" using 1:2 with lines title "温度(2)℃" ls 4 ,\
+     "thermo_data/thermo_data2.txt" using 1:11 with lines title "地温1℃" ls 8,\
+     "thermo_data/thermo_data2.txt" using 1:11 with lines title "地温2℃" ls 7 ,\
+     "thermo_data/thermo_data2.txt" using 1:($8/3) with lines title "湿度(1/3)"  ls 3,\
+     "thermo_data/thermo_data2.txt" using 1:($3/3) with lines title "湿度2(1/3)"  ls 5,\
+     "thermo_data/thermo_data2.txt" using 1:($9/100) with lines title "ppm1(1/100)" ls 1,\
+     "thermo_data/thermo_data2.txt" using 1:($4/100) with lines title "ppm2(1/100)" ls 8,\
+     "thermo_data/thermo_data2.txt" using 1:10 with lines title "飽差1g/m3" ls 6,\
+     "thermo_data/thermo_data2.txt" using 1:5 with lines title "飽差(2)g/m3" ls 4
+
 #     "thermo_data/thermo_data2.txt" using 1:10 with lines title "温度(2)℃" ls 8,\
 #     "thermo_data/thermo_data2.txt" using 1:13 with lines title "温度(3)℃" ls 9
      

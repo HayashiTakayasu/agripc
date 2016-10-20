@@ -5,12 +5,13 @@ require "./counter"
 include AgriController
 
 burn_sec=300
+burn_sec_sum=0
 
 db=Redis.new
 name="co2_2"
-ppm_refer="ppm"#ppm_refer
-degree_refer="degree"
-
+ppm_refer="ppm_2"#ppm_refer
+degree_refer="degree_2"
+fan_refer="fan_2"
 #IO reference
 co2_bit="H"#co2
 heater_fan_bit=""#heater_fan
@@ -33,12 +34,12 @@ loop do
   num=db.get(ppm_refer).to_f
     
     degree=db.get(degree_refer).to_f       #add 20151003
-    fan_set=db.get("fan_set_now").to_f #add
-    fan=db.get("fan")                  #add "on" or "off"
+    fan_set=db.get(fan_refer+"_set_now").to_f #add
+    fan=db.get(fan_refer)                  #add "on" or "off"
     
-    w1=db.get("window1:step").to_f
-    w2=db.get("window2:step").to_f
-    w3=db.get("window3:step").to_f
+    w1=db.get("window4:step").to_f
+    w2=db.get("window5:step").to_f
+    w3=db.get("window6:step").to_f
     ###other targets
     ##"on","off"
     #heater=db.get("heater")
@@ -72,18 +73,19 @@ loop do
       
       6.times do       
         sleep burn_sec
+        burn_sec_sum=burn_sec_sum+burn_sec
         
         ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
         obj=N_dan_thermo.new(ary,diff=10,dead_time=10,changed_time=Time.now)
         num=db.get(ppm_refer).to_f
         bit=(obj.set_now > num+80)
         
-        fan_set=db.get("fan_set_now").to_f #add
-        fan=db.get("fan")                  #add "on" or "off"
+        fan_set=db.get(fan_refer+"set_now").to_f #add
+        fan=db.get(fan_refer)                  #add "on" or "off"
         
-        w1=db.get("window1:step").to_f
-        w2=db.get("window2:step").to_f
-        w3=db.get("window3:step").to_f
+        w1=db.get("window4:step").to_f
+        w2=db.get("window5:step").to_f
+        w3=db.get("window6:step").to_f
         unless w1<2 and w2<2 and w3<2 and fan=="off" and (fan_set-degree > 1.5) and num > 0
           bit=false
         end        
@@ -102,7 +104,7 @@ loop do
       sleep 180
       db.set(name,"off")#for circulator
       
-      counter("./log/#{name}_min.txt",burn_sec/60.0)
+      counter("./log/#{name}_min.txt",burn_sec_sum/60.0)
       p "end"
     end
     sleep 60

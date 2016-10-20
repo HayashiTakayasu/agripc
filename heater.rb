@@ -6,7 +6,7 @@ include AgriController
 db=Redis.new
 name="heater"
 heater_bit="I"
-degree_ref="degree"
+degree_ref="degree_1"
 
 ary_before=nil
 change=nil

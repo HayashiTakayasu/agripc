@@ -16,7 +16,7 @@ end
 
 str=`ps aux |grep ruby`
 #ls=["mh_puts.rb","controll_loop.rb","main_ma.rb"]
-p ls=["db_copy.rb","rh_puts_db.rb","main_ma.rb","time_adjust_loop.rb",
+p ls=["db_copy_2.rb","rh_puts_db.rb","main_ma.rb","time_adjust_loop.rb",
 "window0.rb","window1.rb","window2.rb","window3.rb","window4.rb","window5.rb","window6.rb","window7.rb",
 "co2.rb","co2_2.rb","circulator.rb","circulator_2.rb","fan.rb","fan_2.rb",
 "heater.rb","heater_2.rb","boiler.rb",
