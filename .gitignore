@@ -1,5 +1,5 @@
  {*/*,*}.*~
-*/htdocs/data/*
+*/htdocs/data/*.gz
 */messages/message*
 log/*.txt.*
 thermo_data/thermo_data*.txt.*
