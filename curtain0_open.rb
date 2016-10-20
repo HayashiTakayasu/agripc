@@ -7,7 +7,7 @@ include AgriController
 
 db=Redis.new
 name="curtain0_open"
-cir_bit="P"
+cir_bit="p"
 
 change=nil
 loop do

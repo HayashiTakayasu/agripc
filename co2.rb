@@ -5,12 +5,12 @@ require "./counter"
 include AgriController
 
 burn_sec=300
-burn_sec_sum=0
+
 db=Redis.new
 name="co2"
-ppm_refer="ppm_1"#ppm_refer
-degree_refer="degree_1"
-fan_refer="fan"
+ppm_refer="ppm"#ppm_refer
+degree_refer="degree"
+
 #IO reference
 co2_bit="G"#co2
 heater_fan_bit=""#heater_fan
@@ -21,7 +21,7 @@ ary_before=nil
 change=nil
 obj=nil
 loop do
-  p ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
+  ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
   p name+" , "+ary.to_s
   if ary!=ary_before
     obj=N_dan_thermo.new(ary,diff=10,dead_time=10,changed_time=Time.now)
@@ -33,12 +33,12 @@ loop do
   num=db.get(ppm_refer).to_f
     
     degree=db.get(degree_refer).to_f       #add 20151003
-    fan_set=db.get(fan_refer+"_set_now").to_f #add
-    fan=db.get(fan_refer)                  #add "on" or "off"
+    fan_set=db.get("fan_set_now").to_f #add
+    fan=db.get("fan")                  #add "on" or "off"
     
-    w1=db.get("window0:step").to_f
-    w2=db.get("window1:step").to_f
-    w3=db.get("window2:step").to_f
+    w1=db.get("window1:step").to_f
+    w2=db.get("window2:step").to_f
+    w3=db.get("window3:step").to_f
     ###other targets
     ##"on","off"
     #heater=db.get("heater")
@@ -72,19 +72,18 @@ loop do
       
       6.times do       
         sleep burn_sec
-        burn_sec_sum=burn_sec_sum+burn_sec
         
         ary=yaml_dbr(name,"./bin_ac/cgi-bin/config/"+name)
         obj=N_dan_thermo.new(ary,diff=10,dead_time=10,changed_time=Time.now)
         num=db.get(ppm_refer).to_f
         bit=(obj.set_now > num+80)
         
-        fan_set=db.get(fan_refer+"set_now").to_f #add
-        fan=db.get(fan_refer)                  #add "on" or "off"
+        fan_set=db.get("fan_set_now").to_f #add
+        fan=db.get("fan")                  #add "on" or "off"
         
-        w1=db.get("window0:step").to_f
-        w2=db.get("window1:step").to_f
-        w3=db.get("window2:step").to_f
+        w1=db.get("window1:step").to_f
+        w2=db.get("window2:step").to_f
+        w3=db.get("window3:step").to_f
         unless w1<2 and w2<2 and w3<2 and fan=="off" and (fan_set-degree > 1.5) and num > 0
           bit=false
         end        
@@ -103,7 +102,7 @@ loop do
       sleep 180
       db.set(name,"off")#for circulator
       
-      counter("./log/#{name}_min.txt",burn_sec_sum/60.0)
+      counter("./log/#{name}_min.txt",burn_sec/60.0)
       p "end"
     end
     sleep 60

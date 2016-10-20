@@ -20,7 +20,7 @@ name.each do |dir|
     p Dir.pwd
     #ac backup
     filename="backup_#{define_name}.tar.gz"
-    p command="tar -zcf #{filename} #{dir} --exclude #{dir}/bin_ac/htdocs/data/*.gz"
+    p command="tar -zcf #{filename} #{dir} --exclude #{dir}/bin_ac/htdocs/data/*"
     `#{command}` unless $DEBUG
     p command2=%Q!mv ./#{filename} #{pwd}/bin_ac/htdocs/data/! 
     `#{command2}` unless $DEBUG

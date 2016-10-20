@@ -68,7 +68,12 @@ rescue
 end
 
 error=""
-error=File.read("./log/errors.txt")
+begin
+  error=File.read("./log/errors.txt")
+rescue
+  #none
+end
+
 bgcolor=""
 if error!=""
   bgcolor=' bgcolor="pink"'#"#ff7777"'
@@ -107,9 +112,9 @@ str= <<eos
 <hr/>
 センサー状況
 <table border="1">
-<td>番号</td><td>温度℃</td><td>湿度%</td><td>CO2濃度ppm</td><td>飽差g/m3</td><tr/>
-<td>センサー1</td><td>#{db.get("degree")}℃</td><td>#{db.get("humidity")}%</td><td>#{db.get("ppm")}ppm</td><td>#{db.get("housa")}</td><tr/>
-<td>地温</td><td>#{db.get("soil_temp")}℃</td><td></td><td></td><td></td><tr/>
+<td>番号</td><td>温度℃</td><td>湿度%</td><td>CO2濃度ppm</td><td>飽差g/m3</td><td>露点℃</td><td>絶対湿度g/m3</td><tr/>
+<td>センサー1</td><td>#{db.get("degree")}℃</td><td>#{db.get("humidity")}%</td><td>#{db.get("ppm")}ppm</td><td>#{db.get("housa")}</td><td>#{db.get("roten")}</td><td>#{db.get("zettai")}</td><tr/>
+<td>地温</td><td>#{db.get("soil_temp")}℃</td><td></td><td></td><td></td><td></td><td></td><tr/>
 </table>
  
 <hr/>

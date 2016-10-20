@@ -56,13 +56,13 @@ end
             humidity+","+
             ppm+", "+
             housa_+","+
-            soil_temp+",  "+
-            db.get("degree_1").to_f.to_s+","+
-            db.get("humidity_1").to_f.to_s+", "+
-            db.get("ppm_1").to_f.to_s+", "+
-            db.get("housa_1").to_f.to_s+", "+            
-            db.get("soil_temp_1").to_f.to_s+",  "+
-
+            soil_temp+", "+
+            db.get("usbrh1:degree").to_f.to_s+","+
+            db.get("roten").to_f.to_s+","+
+            db.get("zettai").to_f.to_s+", "+
+            
+            db.get("usbrh2:degree").to_f.to_s+","+
+            db.get("usbrh2:humidity").to_f.to_s+","+
             db.get("usbrh2:housa").to_f.to_s+", "+
             
             db.get("usbrh3:degree").to_f.to_s+","+

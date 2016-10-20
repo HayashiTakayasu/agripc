@@ -25,6 +25,7 @@ loop do
     sleep   10
     before2=min
     `ruby ./thermo_gruff2.rb ./thermo_data/thermo_data2.txt ./thermo_data/thermo_data.jpg`
+    `gnuplot ./sample.plot`
     sleep 1
     #system("clear")
   end

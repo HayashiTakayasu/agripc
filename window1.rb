@@ -48,7 +48,7 @@ catch :reset_signal do
       begin
         #data=thermo_read("http://127.0.0.1:8000/last_data")
         #data=File.read("./last_data").chomp
-        data=db.get("degree_1")
+        data=db.get("degree")
         temp=data.to_f
         #if data.class==String
         #temp=data.split(",")[1].to_f

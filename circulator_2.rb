@@ -19,15 +19,15 @@ loop do
     
     ###other targets
     ##"on","off"
-    heater=db.get("heater_2")
-    co2=db.get("co2_2")
-    fan=db.get("fan_2")
+    heater=db.get("heater")
+    co2=db.get("co2")
+    fan=db.get("fan")
     
     ##high,low
     rh=db.get("humidity").to_f
     housa_=db.get("housa").to_f
     #p [heater,co2,fan,rh,housa_]
-    if heater=="on" or co2=="on" or fan=="on" or (rh>85.0) or (housa_<2.0)
+    if heater=="on" or co2=="on" or fan=="on" #or (rh>85.0) or (housa_<2.0)
       #p [heater,co2,fan,rh,housa_]
       bit=true
     end

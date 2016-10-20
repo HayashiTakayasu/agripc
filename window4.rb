@@ -32,7 +32,7 @@ sleep 2
 
 catch :reset_signal do
   house1=N_dan_thermo.new(temp_config)#read data
-  window=Value_controller.new(steps=9,open_sec=20,#55
+  window=Value_controller.new(steps=6,open_sec=20,#55
     down_sec=18,#35,
     sensitivity=0.5,set=17,dead=30,true,false)
   p window

@@ -47,7 +47,5 @@ end
 
 if $0==__FILE__
 $KCODE="s"
-  por=ARGV[0]|| 10080
-  port=por.to_i
-  AgriController::webrick_start(Dir.pwd,port)
+  AgriController::webrick_start
 end

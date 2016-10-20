@@ -6,7 +6,7 @@ include AgriController
 db=Redis.new
 name="boiler"
 heater_bit="O"
-degree_ref="soil_temp_1"
+degree_ref="soil_temp"
 
 ary_before=nil
 change=nil
